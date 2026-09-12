@@ -1,0 +1,27 @@
+{
+  "average_accuracy": 0.22729999999999997,
+  "average_forgetting": 0.8805000000000001,
+  "backward_transfer": -0.8805000000000001,
+  "forward_transfer": 0.0,
+  "final_per_task_accuracy": [
+    0.0775,
+    0.029,
+    0.1115,
+    0.0615,
+    0.857
+  ],
+  "diagonal_accuracy": [
+    0.964,
+    0.962,
+    0.909,
+    0.9665,
+    0.857
+  ],
+  "n_tasks": 5,
+  "method": "replay",
+  "dataset": "split-cifar10",
+  "scenario": "class",
+  "seed": 42,
+  "wall_seconds": 82.7,
+  "n_parameters": 1094750
+}

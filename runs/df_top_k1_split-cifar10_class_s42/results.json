@@ -1,0 +1,51 @@
+{
+  "average_accuracy": 0.1726,
+  "average_forgetting": 0.948375,
+  "backward_transfer": -0.948375,
+  "forward_transfer": 0.0,
+  "final_per_task_accuracy": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.863
+  ],
+  "diagonal_accuracy": [
+    0.964,
+    0.956,
+    0.898,
+    0.9755,
+    0.863
+  ],
+  "n_tasks": 5,
+  "method": "drift_freeze",
+  "dataset": "split-cifar10",
+  "scenario": "class",
+  "seed": 42,
+  "wall_seconds": 84.3,
+  "n_parameters": 273950,
+  "method_info": {
+    "select_mode": "top",
+    "freeze_topk": 1,
+    "ranked_layers_by_drift": [
+      "layer4",
+      "layer3",
+      "layer2",
+      "layer1",
+      "stem"
+    ],
+    "frozen_layers": [
+      "layer4"
+    ],
+    "frozen_param_count": 820800,
+    "freeze_granularity": "layers",
+    "drift_profile": {
+      "stem": 0.10669049418280102,
+      "layer1": 0.29897592617660634,
+      "layer2": 0.3732240691064389,
+      "layer3": 0.5135151916782136,
+      "layer4": 0.6005199199583914,
+      "head": 0.8167598856089526
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "average_accuracy": 0.16040000000000001,
+  "average_forgetting": 0.8837499999999999,
+  "backward_transfer": -0.8837499999999999,
+  "forward_transfer": 0.0,
+  "final_per_task_accuracy": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.802
+  ],
+  "diagonal_accuracy": [
+    0.964,
+    0.941,
+    0.8135,
+    0.8165,
+    0.802
+  ],
+  "n_tasks": 5,
+  "method": "ewc",
+  "dataset": "split-cifar10",
+  "scenario": "class",
+  "seed": 42,
+  "wall_seconds": 154.1,
+  "n_parameters": 1094750
+}

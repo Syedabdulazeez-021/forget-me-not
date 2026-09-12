@@ -1,0 +1,8 @@
+# Pinned loosely: any recent torch works. Install torch matching your CUDA
+# version from https://pytorch.org/get-started/locally/ first, then:
+#   pip install -r requirements.txt
+torch>=2.0
+torchvision>=0.15
+numpy>=1.23
+matplotlib>=3.6
+pytest>=7.0

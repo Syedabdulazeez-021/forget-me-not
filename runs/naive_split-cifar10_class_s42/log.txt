@@ -1,0 +1,47 @@
+[cfg] {"dataset": "split-cifar10", "scenario": "class", "method": "naive", "epochs_per_task": 5, "batch_size": 128, "lr": 0.001, "weight_decay": 0.0, "optimizer": "adam", "momentum": 0.9, "buffer_size": 200, "replay_batch": 32, "ewc_lambda": 5000.0, "ewc_fisher_batches": 50, "lwf_alpha": 1.0, "lwf_temperature": 2.0, "freeze_topk": 2, "freeze_select": "top", "freeze_layers": "", "drift_profile": "", "seed": 42, "device": "auto", "num_workers": 0, "data_root": "./data", "out_dir": "runs", "tag": "naive_split-cifar10_class_s42", "amp": true, "eval_on": "test", "max_batches_per_epoch": 0, "extra": {}}
+[env] torch=2.6.0+cu124 device=cuda
+[data] split-cifar10: 5 tasks, class order [8, 1, 5, 0, 7, 2, 9, 4, 3, 6]
+       Task(0, classes=[8, 1], train=9000, val=1000, test=2000)
+       Task(1, classes=[5, 0], train=9000, val=1000, test=2000)
+       Task(2, classes=[7, 2], train=9000, val=1000, test=2000)
+       Task(3, classes=[9, 4], train=9000, val=1000, test=2000)
+       Task(4, classes=[3, 6], train=9000, val=1000, test=2000)
+[model] ReducedResNet18 params=1,094,750
+[method] naive
+[train] task 0 epoch 1/5 loss=0.3723
+[train] task 0 epoch 2/5 loss=0.2280
+[train] task 0 epoch 3/5 loss=0.1847
+[train] task 0 epoch 4/5 loss=0.1458
+[train] task 0 epoch 5/5 loss=0.1290
+[eval ] after task 0: T0=0.9640 T1=0.0000 T2=0.0000 T3=0.0000 T4=0.0000
+[train] task 1 epoch 1/5 loss=0.2730
+[train] task 1 epoch 2/5 loss=0.1595
+[train] task 1 epoch 3/5 loss=0.1229
+[train] task 1 epoch 4/5 loss=0.1194
+[train] task 1 epoch 5/5 loss=0.0964
+[eval ] after task 1: T0=0.0000 T1=0.9585 T2=0.0000 T3=0.0000 T4=0.0000
+[drift] stem=0.0615 layer1=0.1793 layer2=0.2128 layer3=0.2868 layer4=0.3217 head=0.2510
+[train] task 2 epoch 1/5 loss=0.6980
+[train] task 2 epoch 2/5 loss=0.2756
+[train] task 2 epoch 3/5 loss=0.2341
+[train] task 2 epoch 4/5 loss=0.2152
+[train] task 2 epoch 5/5 loss=0.1927
+[eval ] after task 2: T0=0.0000 T1=0.0000 T2=0.9185 T3=0.0000 T4=0.0000
+[drift] stem=0.0988 layer1=0.2686 layer2=0.3416 layer3=0.4710 layer4=0.5332 head=0.5850
+[train] task 3 epoch 1/5 loss=0.6403
+[train] task 3 epoch 2/5 loss=0.1242
+[train] task 3 epoch 3/5 loss=0.0932
+[train] task 3 epoch 4/5 loss=0.0880
+[train] task 3 epoch 5/5 loss=0.0636
+[eval ] after task 3: T0=0.0000 T1=0.0000 T2=0.0000 T3=0.9820 T4=0.0000
+[drift] stem=0.1238 layer1=0.3400 layer2=0.4286 layer3=0.5893 layer4=0.6929 head=0.9866
+[train] task 4 epoch 1/5 loss=0.9597
+[train] task 4 epoch 2/5 loss=0.3130
+[train] task 4 epoch 3/5 loss=0.2765
+[train] task 4 epoch 4/5 loss=0.2549
+[train] task 4 epoch 5/5 loss=0.2387
+[eval ] after task 4: T0=0.0000 T1=0.0000 T2=0.0000 T3=0.0000 T4=0.9025
+[drift] stem=0.1427 layer1=0.4080 layer2=0.5098 layer3=0.7070 layer4=0.8542 head=1.4443
+
+[RESULT] method=naive         avg_acc=0.1805  avg_forget=0.9557  bwt=-0.9557  (91s)
+[saved ] runs\naive_split-cifar10_class_s42
